@@ -8,11 +8,11 @@ const start = async () => {
   // connect DB
   await connectDB();
   app.listen(PORT, () => {
-    console.log(`Sever is running at ${PORT} in ${process.env.NODE_ENV}`);
+    console.log(`Sever is running at ${PORT} in ${process.env.NODE_ENV} mode`);
   });
 };
 
-start().catch((errr) => {
-  console.error("Faild tp start server", errr);
+start().catch((err) => {
+  console.error("Faild tp start server", err);
   process.exit(1);
 });
