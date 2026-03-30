@@ -22,13 +22,13 @@ const verifyRefreshToken = (token) => {
 };
 
 const generateResetToken = () => {
-  const rawtoken = crypto.randomBytes(32).toString("hex");
+  const rawToken = crypto.randomBytes(32).toString("hex");
   const hashedToken = crypto
     .createHash("sha256")
-    .update(rawtoken)
+    .update(rawToken)
     .digest("hex");
 
-  return { rawtoken, hashedToken };
+  return { rawToken, hashedToken };
 };
 
 export {
